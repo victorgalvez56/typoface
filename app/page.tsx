@@ -33,50 +33,19 @@ const features = [
   },
 ];
 
-const WORDS_PREVIEW = [
-  { text: '빛', color: '#FF3366' },
-  { text: '그림자', color: '#FF6B35' },
-  { text: '사랑', color: '#FFD700' },
-  { text: '꿈', color: '#00FF88' },
-  { text: '시간', color: '#00BFFF' },
-  { text: '기억', color: '#9B59B6' },
-  { text: 'love', color: '#FF1493' },
-  { text: 'light', color: '#00CED1' },
-  { text: '自然', color: '#FF4500' },
-  { text: '時間', color: '#7FFF00' },
-  { text: 'alma', color: '#FF3366' },
-  { text: 'نور', color: '#FFD700' },
-  { text: 'dream', color: '#00FF88' },
-  { text: '空', color: '#00BFFF' },
-  { text: 'luz', color: '#FF6B35' },
-];
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden">
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        {/* Animated pill background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="hero-bg-grid" />
-          {WORDS_PREVIEW.map((w, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full px-3 py-1 text-sm font-bold text-black select-none"
-              style={{
-                backgroundColor: w.color,
-                left: `${(i * 7.3 + 5) % 90}%`,
-                top: `${(i * 13.7 + 3) % 90}%`,
-                opacity: 0.15 + (i % 5) * 0.06,
-                animation: `float-hero ${4 + (i % 3)}s ease-in-out infinite`,
-                animationDelay: `${(i * 0.4) % 5}s`,
-                transform: `rotate(${(i * 11) % 20 - 10}deg)`,
-              }}
-            >
-              {w.text}
-            </div>
-          ))}
-        </div>
+        {/* Subtle radial glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(255,51,102,0.08) 0%, transparent 70%)',
+          }}
+        />
 
         {/* Hero content */}
         <div className="relative z-10 flex flex-col items-center text-center gap-6 max-w-3xl">
@@ -104,7 +73,7 @@ export default function Home() {
             Your face, written in words.
           </p>
 
-          <p className="text-white/30 max-w-lg text-sm leading-relaxed">
+          <p className="text-white/35 max-w-lg text-sm leading-relaxed">
             Typoface turns your webcam feed into a living mosaic of colored pill-shaped word badges.
             Brightness maps to opacity — your portrait emerges, letter by letter.
           </p>

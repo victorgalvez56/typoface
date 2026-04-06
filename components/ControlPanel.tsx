@@ -69,7 +69,7 @@ export default function ControlPanel({
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-10"
+      className="fixed bottom-0 left-0 right-0 z-10 lg:hidden"
       style={{
         background: 'rgba(0,0,0,0.75)',
         backdropFilter: 'blur(24px)',
