@@ -7,7 +7,9 @@
 
 > Real-time typographic portrait — your webcam feed rendered as a mosaic of colored pill-shaped word badges.
 
-![Demo placeholder](https://placehold.co/1200x630/060606/FF3366?text=typoface+demo)
+![typoface preview](./public/preview.gif)
+
+> Live demo: [typoface.victorgalvez.dev](https://typoface.victorgalvez.dev) · Full MP4: [preview.mp4](https://typoface.victorgalvez.dev/preview.mp4)
 
 ---
 
